@@ -74,6 +74,7 @@ C:\Users\hazze\Desktop\Hazem\كتب حازم\3rd Season\Second term\SW-2\Project
 C:\Users\hazze\Desktop\Hazem\كتب حازم\3rd Season\Second term\SW-2\Project\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy System.csproj.CopyComplete
 C:\Users\hazze\Desktop\Hazem\كتب حازم\3rd Season\Second term\SW-2\Project\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy System.dll
 C:\Users\hazze\Desktop\Hazem\كتب حازم\3rd Season\Second term\SW-2\Project\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy System.pdb
+<<<<<<< HEAD
 F:\all projects\sw2\New folder\Pharmacy-system\Pharmacy System\Pharmacy System\bin\Pharmacy System.dll.config
 F:\all projects\sw2\New folder\Pharmacy-system\Pharmacy System\Pharmacy System\bin\Pharmacy System.dll
 F:\all projects\sw2\New folder\Pharmacy-system\Pharmacy System\Pharmacy System\bin\Pharmacy System.pdb
@@ -153,3 +154,80 @@ F:\all projects\sw2\New folder\Pharmacy-system\Pharmacy System\Pharmacy System\b
 F:\all projects\sw2\New folder\Pharmacy-system\Pharmacy System\Pharmacy System\bin\EntityFramework.xml
 F:\all projects\sw2\New folder\Pharmacy-system\Pharmacy System\Pharmacy System\bin\EntityFramework.SqlServer.xml
 F:\all projects\sw2\New folder\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy System.csprojAssemblyReference.cache
+=======
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\Pharmacy System.dll.config
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\Pharmacy System.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\Pharmacy System.pdb
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\csc.exe
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\csc.exe.config
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\csc.rsp
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\csi.exe
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\csi.exe.config
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\csi.rsp
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.Managed.Core.targets
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.AppContext.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Collections.Immutable.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Console.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.IO.Compression.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.IO.FileSystem.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.IO.Pipes.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Reflection.Metadata.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Security.AccessControl.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Security.Claims.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Security.Principal.Windows.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.ValueTuple.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Xml.XmlDocument.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Xml.XPath.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\vbc.exe
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\vbc.exe.config
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\vbc.rsp
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\VBCSCompiler.exe
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\roslyn\VBCSCompiler.exe.config
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\Antlr3.Runtime.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\Microsoft.Web.Infrastructure.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\Newtonsoft.Json.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\System.Web.Helpers.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\System.Web.Mvc.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\System.Web.Optimization.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\System.Web.Razor.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\System.Web.WebPages.Deployment.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\System.Web.WebPages.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\System.Web.WebPages.Razor.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\WebGrease.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\System.Web.Helpers.xml
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\System.Web.Mvc.xml
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\System.Web.Optimization.xml
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\System.Web.Razor.xml
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\System.Web.WebPages.xml
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\System.Web.WebPages.Deployment.xml
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\System.Web.WebPages.Razor.xml
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\Newtonsoft.Json.xml
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\Antlr3.Runtime.pdb
+C:\myLocal Repo\Pharmacy System\Pharmacy System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\myLocal Repo\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy System.csprojAssemblyReference.cache
+C:\myLocal Repo\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy System.csproj.CopyComplete
+C:\myLocal Repo\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy System.dll
+C:\myLocal Repo\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy System.pdb
+>>>>>>> 7ab9c97c8556845188adf0e52bd732c2946f69a9

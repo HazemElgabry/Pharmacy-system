@@ -127,14 +127,22 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+<<<<<<< HEAD
     <Compile Include="Context\customersContext.cs" />
+=======
+    <Compile Include="Controllers\AccountController.cs" />
+>>>>>>> 7ab9c97c8556845188adf0e52bd732c2946f69a9
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Models\Customer.cs" />
+=======
+    <Compile Include="Models\Account.cs" />
+>>>>>>> 7ab9c97c8556845188adf0e52bd732c2946f69a9
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -149,8 +157,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+<<<<<<< HEAD
     <Content Include="Images\banner.jpg" />
     <Content Include="Images\c-arrows.png" />
+=======
+    <Content Include="images\cover4.jpg" />
+>>>>>>> 7ab9c97c8556845188adf0e52bd732c2946f69a9
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\HazemScripts\bootstrap.bundle.min.js" />
@@ -160,6 +172,9 @@
     <Content Include="Scripts\HazemScripts\jquery.easing.min.js" />
     <Content Include="Scripts\HazemScripts\jquery.min.map" />
     <Content Include="Scripts\HazemScripts\bootstrap.bundle.min.js.map" />
+    <Content Include="webfonts\fa-brands-400.svg" />
+    <Content Include="webfonts\fa-regular-400.svg" />
+    <Content Include="webfonts\fa-solid-900.svg" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\HazemScripts\jquery.min.js" />
     <Content Include="Scripts\HazemScripts\sb-admin-2.min.js" />
@@ -173,10 +188,15 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+<<<<<<< HEAD
     <Content Include="Styles\jquery-2.2.3.min.js" />
     <Content Include="Styles\jquery-ui.css" />
     <Content Include="Styles\jquery-ui.js" />
     <Content Include="Styles\style.css" />
+=======
+    <Content Include="styles\fontawesome-all.css" />
+    <Content Include="styles\style.css" />
+>>>>>>> 7ab9c97c8556845188adf0e52bd732c2946f69a9
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -193,6 +213,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_PagesLayout.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\_LayoutPage1.cshtml" />
     <Content Include="Views\Customer\Done.cshtml" />
     <Content Include="Views\Customer\Registration.cshtml" />
@@ -200,6 +221,25 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Migrations\" />
+=======
+    <Content Include="webfonts\fa-brands-400.eot" />
+    <Content Include="webfonts\fa-brands-400.ttf" />
+    <Content Include="webfonts\fa-brands-400.woff" />
+    <Content Include="webfonts\fa-brands-400.woff2" />
+    <Content Include="webfonts\fa-regular-400.eot" />
+    <Content Include="webfonts\fa-regular-400.ttf" />
+    <Content Include="webfonts\fa-regular-400.woff" />
+    <Content Include="webfonts\fa-regular-400.woff2" />
+    <Content Include="webfonts\fa-solid-900.eot" />
+    <Content Include="webfonts\fa-solid-900.ttf" />
+    <Content Include="webfonts\fa-solid-900.woff" />
+    <Content Include="webfonts\fa-solid-900.woff2" />
+    <Content Include="Views\_LayoutPage1.cshtml" />
+    <Content Include="Views\Account\login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+>>>>>>> 7ab9c97c8556845188adf0e52bd732c2946f69a9
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
