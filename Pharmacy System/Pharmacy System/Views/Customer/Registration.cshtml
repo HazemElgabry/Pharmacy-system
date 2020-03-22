@@ -1,0 +1,80 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+    Layout = "~/Views/_LayoutPage1.cshtml";
+}
+
+<!--background-->
+<h1>Registration Form </h1>
+<div class="register-form-w3layouts">
+    <!-- Form starts here -->
+    <form action="Create" method="post">
+        <h3 class="sub-heading-agileits">Personal Details</h3>
+
+        <div class="main-flex-w3ls-sectns">
+            <div class="field-agileinfo-spc form-w3-agile-text1">
+                <input type="text" name="firstName" placeholder="First Name" required="">
+            </div>
+
+            <div class="field-agileinfo-spc form-w3-agile-text2">
+                <input type="text" name="lastName" placeholder="Last Name" required="">
+            </div>
+        </div>
+
+        <div class="main-flex-w3ls-sectns">
+            <div class="field-agileinfo-spc form-w3-agile-text1">
+                <input type="email" name="emailAddress" placeholder="Email" required="">
+            </div>
+
+            <div class="field-agileinfo-spc form-w3-agile-text2">
+                <input type="text" name="phoneNumber" placeholder="Phone Number" required="">
+            </div>
+        </div>
+
+        <div class="main-flex-w3ls-sectns">
+            <div class="field-agileinfo-spc form-w3-agile-text1">
+                <input type="text" name="userName" placeholder="User Name" required="">
+            </div>
+
+            <div class="field-agileinfo-spc form-w3-agile-text2">
+                <input type="text" name="Password" placeholder="Password" required="">
+            </div>
+        </div>
+
+        <div class="main-flex-w3ls-sectns">
+            <div class="field-agileinfo-spc form-w3-agile-text1">
+                <input type="text" name="creditCardNo" placeholder="Credit Card No" required="">
+            </div>
+            <div class="field-agileinfo-spc form-w3-agile-text2">
+                <input type="text" name="zipCode" placeholder="Zip Code" required="">
+            </div>
+        </div>
+
+        <div class="main-flex-w3ls-sectns">
+            <div class="field-agileinfo-spc form-w3-agile-text1">
+                <input id="datepicker" name="dateOfBirth" type="text" placeholder="DOB" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}"
+                       required="">
+            </div>
+        </div>
+
+        <div class="field-agileinfo-spc form-w3-agile-text">
+            <textarea name="address" placeholder="Address..."></textarea>
+        </div>
+
+        <div class="clear"></div>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear Form">
+        <div class="clear"></div>
+    </form>
+
+</div>
+
+<script src="~/Styles/jquery-2.2.3.min.js"></script>
+
+<script src="~/Styles/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker();
+    });
+</script>
