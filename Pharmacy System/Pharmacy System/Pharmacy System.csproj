@@ -178,11 +178,25 @@
     <Compile Include="Migrations\202005170505024_initialModel.Designer.cs">
       <DependentUpon>202005170505024_initialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005170529567_CreateAdminTable.cs" />
+    <Compile Include="Migrations\202005170529567_CreateAdminTable.Designer.cs">
+      <DependentUpon>202005170529567_CreateAdminTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005170531100_CreateCustomerTable.cs" />
+    <Compile Include="Migrations\202005170531100_CreateCustomerTable.Designer.cs">
+      <DependentUpon>202005170531100_CreateCustomerTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005170533167_CreateMedicineTable.cs" />
+    <Compile Include="Migrations\202005170533167_CreateMedicineTable.Designer.cs">
+      <DependentUpon>202005170533167_CreateMedicineTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Class1.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Medicine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -322,6 +336,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202005170505024_initialModel.resx">
       <DependentUpon>202005170505024_initialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005170529567_CreateAdminTable.resx">
+      <DependentUpon>202005170529567_CreateAdminTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005170531100_CreateCustomerTable.resx">
+      <DependentUpon>202005170531100_CreateCustomerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005170533167_CreateMedicineTable.resx">
+      <DependentUpon>202005170533167_CreateMedicineTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
