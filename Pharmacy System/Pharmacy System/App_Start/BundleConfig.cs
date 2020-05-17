@@ -22,25 +22,9 @@ namespace Pharmacy_System
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
-            // Hazem Script bundels
-            bundles.Add(new ScriptBundle("~/bundles/HazemScripts").Include(
-                      "~/Scripts/HazemScripts/jquery.min.js",
-                      "~/Scripts/HazemScripts/bootstrap.bundle.min.js",
-                      "~/Scripts/HazemScripts/jquery.easing.min.js",
-                      "~/Scripts/HazemScripts/sb-admin-2.min.js",
-                      "~/Scripts/HazemScripts/Chart.min.js",
-                      "~/Scripts/HazemScripts/chart-area-demo.js",
-                      "~/Scripts/HazemScripts/chart-pie-demo.js"));
-
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
-
-            // Hazem Css bundles
-            bundles.Add(new StyleBundle("~/Content/HazemCss").Include(
-                      "~/Content/HazemCss/all.min.css",
-                      "~/Content/HazemCss/sb-admin-2.min.css",
-                      "~/Content/HazemCss/fontAwesome.css"));
         }
     }
 }

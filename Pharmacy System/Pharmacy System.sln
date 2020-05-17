@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy System", "Pharmacy System\Pharmacy System.csproj", "{9C73DEDB-9B44-4D01-A844-D107E930CEAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pharmacy System", "Pharmacy System\Pharmacy System.csproj", "{3AD0D298-2B1E-488E-A2D3-8C259B18B036}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9C73DEDB-9B44-4D01-A844-D107E930CEAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C73DEDB-9B44-4D01-A844-D107E930CEAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C73DEDB-9B44-4D01-A844-D107E930CEAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C73DEDB-9B44-4D01-A844-D107E930CEAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AD0D298-2B1E-488E-A2D3-8C259B18B036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AD0D298-2B1E-488E-A2D3-8C259B18B036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AD0D298-2B1E-488E-A2D3-8C259B18B036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AD0D298-2B1E-488E-A2D3-8C259B18B036}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {59D0EE1C-02F4-4FF4-BF3A-B1EE8339D08C}
+		SolutionGuid = {2400EC1D-42F0-4EB8-93C6-08A8ABF09F91}
 	EndGlobalSection
 EndGlobal
