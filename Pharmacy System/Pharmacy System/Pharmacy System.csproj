@@ -168,12 +168,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005170505024_initialModel.cs" />
+    <Compile Include="Migrations\202005170505024_initialModel.Designer.cs">
+      <DependentUpon>202005170505024_initialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Class1.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -184,12 +191,37 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Project_Content\bootstrap-progressbar-3.3.4.min.css" />
+    <Content Include="Content\Project_Content\bootstrap.min.css" />
+    <Content Include="Content\Project_Content\custom.min.css" />
+    <Content Include="Content\Project_Content\daterangepicker.css" />
+    <Content Include="Content\Project_Content\font-awesome.min.css" />
+    <Content Include="Content\Project_Content\green.css" />
+    <Content Include="Content\Project_Content\jqvmap.min.css" />
+    <Content Include="Content\Project_Content\nprogress.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\american-express.png" />
+    <Content Include="Image\cropper.jpg" />
+    <Content Include="Image\favicon.ico" />
+    <Content Include="Image\img.jpg" />
+    <Content Include="Image\inbox.png" />
+    <Content Include="Image\mastercard.png" />
+    <Content Include="Image\media.jpg" />
+    <Content Include="Image\paypal.png" />
+    <Content Include="Image\picture.jpg" />
+    <Content Include="Image\prod-1.jpg" />
+    <Content Include="Image\prod-2.jpg" />
+    <Content Include="Image\prod-3.jpg" />
+    <Content Include="Image\prod-4.jpg" />
+    <Content Include="Image\prod-5.jpg" />
+    <Content Include="Image\user.png" />
+    <Content Include="Image\visa.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\Project_Content\bootstrap.min.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -201,6 +233,30 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Project_Scripts\bootstrap-progressbar.min.js" />
+    <Content Include="Scripts\Project_Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\Project_Scripts\Chart.min.js" />
+    <Content Include="Scripts\Project_Scripts\curvedLines.js" />
+    <Content Include="Scripts\Project_Scripts\custom.min.js" />
+    <Content Include="Scripts\Project_Scripts\date.js" />
+    <Content Include="Scripts\Project_Scripts\daterangepicker.js" />
+    <Content Include="Scripts\Project_Scripts\fastclick.js" />
+    <Content Include="Scripts\Project_Scripts\gauge.min.js" />
+    <Content Include="Scripts\Project_Scripts\icheck.min.js" />
+    <Content Include="Scripts\Project_Scripts\jquery.flot.js" />
+    <Content Include="Scripts\Project_Scripts\jquery.flot.orderBars.js" />
+    <Content Include="Scripts\Project_Scripts\jquery.flot.pie.js" />
+    <Content Include="Scripts\Project_Scripts\jquery.flot.resize.js" />
+    <Content Include="Scripts\Project_Scripts\jquery.flot.spline.min.js" />
+    <Content Include="Scripts\Project_Scripts\jquery.flot.stack.js" />
+    <Content Include="Scripts\Project_Scripts\jquery.flot.time.js" />
+    <Content Include="Scripts\Project_Scripts\jquery.min.js" />
+    <Content Include="Scripts\Project_Scripts\jquery.vmap.js" />
+    <Content Include="Scripts\Project_Scripts\jquery.vmap.sampledata.js" />
+    <Content Include="Scripts\Project_Scripts\jquery.vmap.world.js" />
+    <Content Include="Scripts\Project_Scripts\moment.min.js" />
+    <Content Include="Scripts\Project_Scripts\nprogress.js" />
+    <Content Include="Scripts\Project_Scripts\skycons.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -235,9 +291,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\Project_Shareds\_PharmacyLayout.cshtml" />
+    <Content Include="Scripts\Project_Scripts\jquery.min.map" />
+    <Content Include="Scripts\Project_Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Views\Admin\Admin_Dashboard.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\AdminDashboard\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -251,6 +312,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202005170505024_initialModel.resx">
+      <DependentUpon>202005170505024_initialModel.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
