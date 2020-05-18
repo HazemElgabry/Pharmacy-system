@@ -215,3 +215,6 @@ D:\New1\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy Syste
 D:\New1\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.CreateAdminTable.resources
 D:\New1\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.CreateCustomerTable.resources
 D:\New1\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.CreateMedicineTable.resources
+C:\Users\hazze\Desktop\Hazem\كتب حازم\3rd Season\Second term\SW-2\Project\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.CreateAdminTable.resources
+C:\Users\hazze\Desktop\Hazem\كتب حازم\3rd Season\Second term\SW-2\Project\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.CreateCustomerTable.resources
+C:\Users\hazze\Desktop\Hazem\كتب حازم\3rd Season\Second term\SW-2\Project\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.CreateMedicineTable.resources

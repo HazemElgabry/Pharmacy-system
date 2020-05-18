@@ -689,3 +689,45 @@
     </div>
 </div>
 <!-- /page content -->
+
+@section Sidebar{
+    <div class="menu_section">
+        <h3>General</h3>
+        <ul class="nav side-menu">
+            <li>                
+                <a href="@Url.Action("Admin_Dashboard", "Admin", null)"><i class="fa fa-dashboard"></i> Dashboard</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Admin_Profile", "Admin", null)"><i class="fa fa-user-md"></i> Profile</a>
+            </li>
+            <li>
+                <a><i class="fa fa-users"></i> Admins <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="@Url.Action("Show_Admins", "Admin", null)">Show Admins</a></li>
+                    <li><a href="@Url.Action("Add_Admins", "Admin", null)">Add Admins</a></li>
+                </ul>
+            </li>
+            <li>
+                <a><i class="fa fa-wheelchair"></i> Customers <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="@Url.Action("Show_Customers", "Admin", null)">Show Customers</a></li>
+                    <li><a href="@Url.Action("Add_Customers", "Admin", null)">Add Customer</a></li>
+                </ul>
+            </li>
+            <li>
+                <a><i class="fa fa-plus-square"></i> Medicines <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="@Url.Action("Show_Medicine", "Admin", null)">Show Medicines</a></li>
+                    <li><a href="@Url.Action("Add_Medicine", "Admin", null)">Add Medicines</a></li>
+                </ul>
+            </li>
+            <li>
+                <a><i class="fa fa-newspaper-o"></i> News <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="@Url.Action("Show_News", "Admin", null)">Show News</a></li>
+                    <li><a href="@Url.Action("Add_News", "Admin", null)">Add News</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+}
