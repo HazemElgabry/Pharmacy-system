@@ -4,7 +4,89 @@
     Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
 }
 
-<h2>Add_Customer</h2>
+<div class="row">
+    <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2><span class="fa fa-user" style="color:dimgrey;"></span> Add customer</h2>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                    <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">
+                            First Name
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                            <input type="text" id="first-name" required="required" class="form-control ">
+                        </div>
+                    </div>
+                    <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                            Last Name
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                            <input type="text" id="last-name" name="last-name" required="required" class="form-control">
+                        </div>
+                    </div>
+                    <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">
+                            Address
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                            <input type="text" class="form-control ">
+                        </div>
+                    </div>
+                    <div class="item form-group">
+                        <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align">Phone no.</label>
+                        <div class="col-md-6 col-sm-6 ">
+                            <input type="number" class="form-control has-feedback-left" id="inputSuccess5">
+                            <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Date Of Birth</label>
+                        <div class="col-md-6 col-sm-6 ">
+                            <input id="birthday" class="date-picker form-control has-feedback-left" required="required" type="date">
+                            <span class="fa fa-calendar form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Email</label>
+                        <div class="col-md-6 col-sm-6 ">
+                            <input type="email" class="form-control has-feedback-left" id="inputSuccess4">
+                            <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">
+                            Card no.
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                            <input type="text" required="required" class="form-control has-feedback-left">
+                            <span class="fa fa-cc-visa form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">
+                            Zip code
+                        </label>
+                        <div class="col-md-6 col-sm-6 ">
+                            <input type="number" class="form-control ">
+                        </div>
+                    </div>
+                    <div class="ln_solid"></div>
+                    <div class="item form-group">
+                        <div class="col-md-6 col-sm-6 offset-md-3">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section Sidebar{
     <div class="menu_section">

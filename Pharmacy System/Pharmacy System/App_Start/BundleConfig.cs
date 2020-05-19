@@ -41,7 +41,8 @@ namespace Pharmacy_System
                        "~/Scripts/Project_Scripts/jquery.vmap.sampledata.js",
                        "~/Scripts/Project_Scripts/moment.min.js",
                        "~/Scripts/Project_Scripts/daterangepicker.js",
-                       "~/Scripts/Project_Scripts/custom.min.js"));
+                       "~/Scripts/Project_Scripts/custom.min.js",
+                       "~/Scripts/Project_Scripts/jquery.dataTables.min.js"));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.

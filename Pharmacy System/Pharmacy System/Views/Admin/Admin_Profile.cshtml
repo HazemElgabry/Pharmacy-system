@@ -4,7 +4,70 @@
     Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
 }
 
-<h2>Admin_Profile</h2>
+<div class="col-md-12 col-sm-12 ">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Profile information</h2>            
+            <div class="clearfix"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                    <div class="x_content">
+                        <br />
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">
+                                First Name
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" id="first-name" disabled="disabled" class="form-control ">
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                Last Name
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" id="last-name" name="last-name" disabled="disabled" class="form-control">
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align">Phone no.</label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="number" class="form-control has-feedback-left" id="inputSuccess5" disabled="disabled">
+                                <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">Date Of Birth</label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input id="birthday" class="date-picker form-control has-feedback-left" disabled="disabled" type="date">
+                                <span class="fa fa-calendar form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">Email</label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="email" class="form-control has-feedback-left" id="inputSuccess4" disabled="disabled">
+                                <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">
+                                Card no.
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" required="required" class="form-control has-feedback-left" disabled="disabled">
+                                <span class="fa fa-cc-visa form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="ln_solid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section Sidebar{
     <div class="menu_section">
