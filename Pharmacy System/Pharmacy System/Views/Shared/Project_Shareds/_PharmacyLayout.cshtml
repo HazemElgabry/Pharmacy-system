@@ -32,7 +32,7 @@
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                         @RenderSection("Sidebar", required: true)
                     </div>
-                    <!-- /sidebar menu -->                    
+                    <!-- /sidebar menu -->
                 </div>
             </div>
             <!-- top navigation -->
@@ -48,21 +48,24 @@
                                     <img src="~/Image/img.jpg" alt="">John Doe
                                 </a>
                                 <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="javascript:;"> Profile</a>                                    
+                                    <a class="dropdown-item" href="javascript:;"> Profile</a>
                                     <a class="dropdown-item" href="login.html"><i class="fa fa-sign-out pull-right" style="color:red;"></i> Log Out</a>
                                 </div>
-                            </li>                            
+                            </li>
                         </ul>
                     </nav>
                 </div>
             </div>
             <!-- /top navigation -->
-            @RenderBody()
-
+            <!-- page content -->
+            <div class="right_col" role="main">
+                @RenderBody()
+            </div>
+            <!-- /page content -->
             <!-- footer content -->
             <footer>
                 <div class="pull-right">
-                    Pharmacy System - by <a href="#">Z Team</a>
+                    &copy; Pharmacy System - by <a href="#">Z Team</a>
                 </div>
                 <div class="clearfix"></div>
             </footer>
