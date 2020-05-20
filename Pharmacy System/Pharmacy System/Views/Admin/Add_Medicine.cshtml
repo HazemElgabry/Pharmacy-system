@@ -1,10 +1,94 @@
-﻿
+﻿@model Pharmacy_System.Models.Medicine
+
 @{
     ViewBag.Title = "Add_Medicine";
     Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
 }
 
-<h2>Add_Medicine</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-md-12 col-sm-12 ">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2><span class="fa fa-user" style="color:dimgrey;"></span>Add Medicine</h2>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="item form-group">
+                            @Html.LabelFor(model => model.name, htmlAttributes: new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                            <div class="col-md-6 col-sm-6 ">
+                                @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control", @type = "text", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            @Html.LabelFor(model => model.description, htmlAttributes: new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                            <div class="col-md-6 col-sm-6 ">
+                                @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            @Html.LabelFor(model => model.black_list, htmlAttributes: new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                            <div class="col-md-6 col-sm-6 ">
+                                @Html.EditorFor(model => model.black_list, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.black_list, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                            <div class="col-md-6 col-sm-6 ">
+                                @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control", @type = "number", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                                <!--<span class="fa fa-cc-visa form-control-feedback left" aria-hidden="true"></span>-->
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            @Html.LabelFor(model => model.max_dose, htmlAttributes: new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                            <div class="col-md-6 col-sm-6 ">
+                                @Html.EditorFor(model => model.max_dose, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                                @Html.ValidationMessageFor(model => model.max_dose, "", new { @class = "text-danger" })
+                                <!--<span class="fa fa-cc-visa form-control-feedback left" aria-hidden="true"></span>-->
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            @Html.LabelFor(model => model.import_date, htmlAttributes: new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                            <div class="col-md-6 col-sm-6 ">
+                                @Html.EditorFor(model => model.import_date, new { htmlAttributes = new { @class = "date-picker form-control", @required = "required", @type = "date" } })
+                                @Html.ValidationMessageFor(model => model.import_date, "", new { @class = "text-danger" })
+                                <!--<span class="fa fa-calendar form-control-feedback left" aria-hidden="true"></span>-->
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            @Html.LabelFor(model => model.expire_date, htmlAttributes: new { @class = "col-form-label col-md-3 col-sm-3 label-align" })
+                            <div class="col-md-6 col-sm-6 ">
+                                @Html.EditorFor(model => model.expire_date, new { htmlAttributes = new { @class = "date-picker form-control", @required = "required", @type = "date" } })
+                                @Html.ValidationMessageFor(model => model.expire_date, "", new { @class = "text-danger" })
+                                <!--<span class="fa fa-calendar form-control-feedback left" aria-hidden="true"></span>-->
+                            </div>
+                        </div>
+                        <div class="ln_solid"></div>
+                        <div class="item form-group">
+                            <div class="col-md-6 col-sm-6 offset-md-3">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@*<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>*@
 
 @section Sidebar{
     <div class="menu_section">
