@@ -190,6 +190,18 @@
     <Compile Include="Migrations\202005170533167_CreateMedicineTable.Designer.cs">
       <DependentUpon>202005170533167_CreateMedicineTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005200606327_Test.cs" />
+    <Compile Include="Migrations\202005200606327_Test.Designer.cs">
+      <DependentUpon>202005200606327_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005200614057_Test2_alternation.cs" />
+    <Compile Include="Migrations\202005200614057_Test2_alternation.Designer.cs">
+      <DependentUpon>202005200614057_Test2_alternation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005200616580_Test4.cs" />
+    <Compile Include="Migrations\202005200616580_Test4.Designer.cs">
+      <DependentUpon>202005200616580_Test4.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -354,6 +366,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005170533167_CreateMedicineTable.resx">
       <DependentUpon>202005170533167_CreateMedicineTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005200606327_Test.resx">
+      <DependentUpon>202005200606327_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005200614057_Test2_alternation.resx">
+      <DependentUpon>202005200614057_Test2_alternation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005200616580_Test4.resx">
+      <DependentUpon>202005200616580_Test4.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
