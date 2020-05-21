@@ -1,4 +1,5 @@
-﻿
+﻿@model IEnumerable<Pharmacy_System.Models.Customer>
+
 @{
     ViewBag.Title = "Show_Customer";
     Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
@@ -24,61 +25,30 @@
                                 <tr>
                                     <th>First Name</th>
                                     <th>Last Name</th>
-                                    <th>Address</th>
+                                    <!--<th>Address</th>-->
                                     <th>Phone</th>
                                     <th>Date of birth</th>
                                     <th>Email</th>
                                     <th>Card</th>
-                                    <th>Zip code</th>
+
                                     <th>Edit</th>
                                 </tr>
                             </thead>
 
                             <tbody>
+                                @foreach (var item in Model)
+                                {
                                 <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
-                                    <td>$320,800</td>
-                                    <td>$320,800</td>
-                                    <td>$320,800</td>
-                                    <td><button type="button" class="btn btn-secondary btn-sm fa fa-edit"></button></td>
+                                    <td>@Html.DisplayFor(ModelItem => item.fname)</td>
+                                    <td>@Html.DisplayFor(ModelItem => item.lname)</td>
+                                    <td>@Html.DisplayFor(ModelItem => item.phone_number)</td>
+                                    <td>@Html.DisplayFor(ModelItem => item.date_birth)</td>
+                                    <td>@Html.DisplayFor(ModelItem => item.email_address)</td>
+                                    <td>@Html.DisplayFor(ModelItem => item.card_id)</td>
+                                    <td>@Html.ActionLink("Edit", "Edit_customer_as_Admin", new { id = item.id }, new { @class = "btn btn-secondary btn-sm fa fa-edit" })</td>
+                                
                                 </tr>
-                                <tr>
-                                    <td>Garrett Winters</td>
-                                    <td>Accountant</td>
-                                    <td>Tokyo</td>
-                                    <td>63</td>
-                                    <td>2011/07/25</td>
-                                    <td>$170,750</td>
-                                    <td>$320,800</td>
-                                    <td>$320,800</td>
-                                    <td><button type="button" class="btn btn-secondary btn-sm fa fa-edit"></button></td>
-                                </tr>
-                                <tr>
-                                    <td>Ashton Cox</td>
-                                    <td>Junior Technical Author</td>
-                                    <td>San Francisco</td>
-                                    <td>66</td>
-                                    <td>2009/01/12</td>
-                                    <td>$86,000</td>
-                                    <td>$320,800</td>
-                                    <td>$320,800</td>
-                                    <td><button type="button" class="btn btn-secondary btn-sm fa fa-edit"></button></td>
-                                </tr>
-                                <tr>
-                                    <td>Cedric Kelly</td>
-                                    <td>Senior Javascript Developer</td>
-                                    <td>Edinburgh</td>
-                                    <td>22</td>
-                                    <td>2012/03/29</td>
-                                    <td>$433,060</td>
-                                    <td>$320,800</td>
-                                    <td>$320,800</td>
-                                    <td><button type="button" class="btn btn-secondary btn-sm fa fa-edit"></button></td>
-                                </tr>
+                                }
                             </tbody>
                         </table>
                     </div>
@@ -101,7 +71,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 col-sm-12 ">
-                <div class="x_panel">                    
+                <div class="x_panel">
                     <div class="x_content">
                         <br />
                         <div class="item form-group">
