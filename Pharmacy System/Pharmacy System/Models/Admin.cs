@@ -21,7 +21,7 @@ namespace Pharmacy_System.Models
         [Display(Name = "Last Name")]
         public string lname { get; set; }
 
-        [Required(ErrorMessage = "* You must enter your Last name")]
+        [Required(ErrorMessage = "* You must enter your User name")]
         [Display(Name = "User Name")]
         public string user_name { get; set; }
 
@@ -48,6 +48,8 @@ namespace Pharmacy_System.Models
         [Required(ErrorMessage = "* You must enter your password")]
         [RegularExpression(@"\w+([-+.']\w+)@\w+([-.]\w+).\w+([-.]\w+)*", ErrorMessage = "Must be a valid Email Address")]
         public string email_address { get; set; }
+
+        [Range(0, 9999999999999999, ErrorMessage = "* Please enter a valid price")]
         public int card_id { get; set; }
 
 

@@ -337,6 +337,8 @@
     <Content Include="Views\Admin\Add_Medicine.cshtml" />
     <Content Include="Views\Admin\Show_News.cshtml" />
     <Content Include="Views\Admin\Add_News.cshtml" />
+    <Content Include="Views\Admin\Edit_Admin.cshtml" />
+    <Content Include="Views\Admin\Edit_customer_as_Admin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
