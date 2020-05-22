@@ -183,7 +183,7 @@
                 if ($("#new").valid()) {
                     myData = $("#new").serialize();
 
-                    var AdminUrl= '@Url.Action("Admin_Profile","Admin")';
+                    var AdminUrl= '@Url.Action("Admin_Dashboard","Admin")';
                     $.ajax({
                         type: "POST",
                         url: "/HomePage/Login",
@@ -194,7 +194,7 @@
                             } else if (response.result == 0) {
                                window.location.href = AdminUrl;
                             } else if (response.result == -1) {
-                                alert("Error");
+                                alert("Email not found");
                             }
 
                         }
