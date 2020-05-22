@@ -1,0 +1,66 @@
+﻿@model Pharmacy_System.Models.Customer
+@{
+    ViewBag.Title = "Customer_Dashboard";
+    Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
+}
+
+<h1>News</h1>
+
+<div class="row">
+    <div class="col-md-6 col-sm-12  ">
+        <div class="x_panel">
+            <div class="x_content">
+                <div class="clearfix"></div>
+                <div>
+                    <div class=" col-md-3 col-sm-3  profile_details">
+                        <div class="well profile_view">
+                            <img src="~/Image/vaitmen_c_small.jpg" alt="" class="img-circle img-fluid">
+
+                            <div class=" profile-bottom text-center">
+
+                                <h4>Anti-Cancer Foods</h4>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class=" col-md-3 col-sm-3  profile_details">
+                        <div class="well profile_view">
+                            <img src="~/Image/green_tea_small.jpg" alt="" class="img-circle img-fluid">
+
+                            <div class=" profile-bottom text-center">
+
+                                <h4>Green Tea Goodness</h4>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Sidebar{
+
+    <div class="menu_section">
+        <h3>General</h3>
+        <ul class="nav side-menu">
+            <li>
+                <a href="@Url.Action("Customer_Dashboard", "Customer",new { id =Model.id}, null)"><i class="fa fa-dashboard"></i> Dashboard</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Customer_Profile", "Customer",new { id =Model.id}, null)"><i class="fa fa-user-md"></i> Profile</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Show_Medicine", "Customer",new { id =Model.id}, null)"><i class="fa fa-dashboard"></i> Show Medicine</a>
+            </li>
+            <li>
+                <a href="@Url.Action("contacts", "Customer",new { id =Model.id}, null)"><i class="fa fa-user-md"></i> contacts</a>
+            </li>
+
+
+        </ul>
+    </div>
+}

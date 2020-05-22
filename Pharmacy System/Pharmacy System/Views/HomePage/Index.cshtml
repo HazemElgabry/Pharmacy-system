@@ -1,0 +1,233 @@
+﻿@model Pharmacy_System.Models.Customer
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    @Styles.Render("~/Content/ProjectCss")
+</head>
+
+<body class="login">
+    <div>
+        <a class="hiddenanchor" id="signup"></a>
+        <a class="hiddenanchor" id="signin"></a>
+
+        <div class="login_wrapper">
+            <div class="animate form login_form">
+                <section class="login_content">
+                    <form id="new">
+                        <h1>Login Form</h1>
+
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                            <div class="form-group">
+
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.email_address, new { htmlAttributes = new { placeholder = "Email", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.email_address, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.password, new { htmlAttributes = new { placeholder = "Password", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <button type="button" id="login" class="btn btn-info">Login</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="clearfix"></div>
+
+                        <div class="separator">
+                            <p class="change_link">
+                                New to site?
+                                <a href="#signup" class="to_register"> Create Account </a>
+                            </p>
+
+                            <div class="clearfix"></div>
+                            <br />
+
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+            <div id="register" class="animate form registration_form">
+                <section class="login_content">
+                    <form id="second">
+
+
+
+
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-horizontal">
+                            <h4>Register</h4>
+                            <hr />
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.fname, new { htmlAttributes = new { placeholder = "First Name", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.fname, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.lname, new { htmlAttributes = new { placeholder = "Last Name", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.lname, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.user_name, new { htmlAttributes = new { placeholder = "User Name", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.user_name, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.password, new { htmlAttributes = new { placeholder = "Password", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.phone_number, new { htmlAttributes = new { placeholder = "Phone Number", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.phone_number, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.date_birth, new { htmlAttributes = new { placeholder = "Date of Birth", @class = "form-control", id = "datepicker" } })
+                                    @Html.ValidationMessageFor(model => model.date_birth, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.email_address, new { htmlAttributes = new { placeholder = "Email", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.email_address, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.card_id, new { htmlAttributes = new { placeholder = "Card id", @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.card_id, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <button type="button" id="register" class="btn btn-info">Register</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="separator">
+                            <p class="change_link">
+                                Already a member ?
+                                <a href="#signin" class="to_register"> Log in </a>
+                            </p>
+
+                            <div class="clearfix"></div>
+                            <br />
+
+
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+<script>
+        $(document).ready(function () {
+            $("#login").click(function () {
+                if ($("#new").valid()) {
+                    myData = $("#new").serialize();
+
+                    var AdminUrl= '@Url.Action("Admin_Profile","Admin")';
+                    $.ajax({
+                        type: "POST",
+                        url: "/HomePage/Login",
+                        data: myData,
+                        success: function (response) {
+                            if (response.result !=0 && response.result!=-1) {
+                               window.location.href = '@Url.Action("Customer_Dashboard","Customer")'+ "/" + response.result;
+                            } else if (response.result == 0) {
+                               window.location.href = AdminUrl;
+                            } else if (response.result == -1) {
+                                alert("Error");
+                            }
+
+                        }
+
+                    })
+                }
+            })
+        })
+</script>
+<script>
+        $(document).ready(function () {
+            $("#register").click(function () {
+                if ($("#second").valid()) {
+                    myData = $("#second").serialize();
+                    var CustomerUrl = '@Url.Action("contacts","Customer")';
+                    $.ajax({
+                        type: "POST",
+                        url: "/HomePage/Register",
+                        data: myData,
+                        success: function (response) {
+                            if (response.result !=0 && response.result!=-1) {
+                               window.location.href = '@Url.Action("Customer_Dashboard","Customer")'+ "/" + response.result;
+                            }else if (response.result == 0) {
+                                alert("Email is alredy found");
+                            }else if (response.result == -1) {
+                                alert("Please make sure that your data is Right ");
+                            }
+
+
+                        }
+
+                    })
+                }
+            })
+        })
+</script>

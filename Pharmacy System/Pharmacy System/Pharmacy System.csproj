@@ -169,7 +169,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -217,6 +219,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Project_Content\animate.min.css" />
     <Content Include="Content\Project_Content\bootstrap-progressbar-3.3.4.min.css" />
     <Content Include="Content\Project_Content\bootstrap.min.css" />
     <Content Include="Content\Project_Content\custom.min.css" />
@@ -339,6 +342,11 @@
     <Content Include="Views\Admin\Add_News.cshtml" />
     <Content Include="Views\Admin\Edit_Admin.cshtml" />
     <Content Include="Views\Admin\Edit_customer_as_Admin.cshtml" />
+    <Content Include="Views\HomePage\Index.cshtml" />
+    <Content Include="Views\Customer\Customer_Dashboard.cshtml" />
+    <Content Include="Views\Customer\Customer_Profile.cshtml" />
+    <Content Include="Views\Customer\Show_Medicine.cshtml" />
+    <Content Include="Views\Customer\contacts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

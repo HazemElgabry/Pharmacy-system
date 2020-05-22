@@ -334,3 +334,115 @@ D:\New2\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_Syste
 C:\Users\hazze\Desktop\Hazem\كتب حازم\3rd Season\Second term\SW-2\Project\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.Test.resources
 C:\Users\hazze\Desktop\Hazem\كتب حازم\3rd Season\Second term\SW-2\Project\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.Test2_alternation.resources
 C:\Users\hazze\Desktop\Hazem\كتب حازم\3rd Season\Second term\SW-2\Project\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.Test4.resources
+E:\last one\Pharmacy System\Pharmacy System\bin\Pharmacy System.dll.config
+E:\last one\Pharmacy System\Pharmacy System\bin\Pharmacy System.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Pharmacy System.pdb
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\csc.exe
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\csc.exe.config
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\csc.rsp
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\csi.exe
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\csi.exe.config
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\csi.rsp
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.Managed.Core.targets
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.AppContext.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Collections.Immutable.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Console.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Diagnostics.StackTrace.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.IO.Compression.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.IO.FileSystem.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.IO.FileSystem.Primitives.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.IO.Pipes.AccessControl.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.IO.Pipes.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Reflection.Metadata.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Security.AccessControl.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Security.Claims.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Security.Cryptography.Encoding.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Security.Principal.Windows.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Text.Encoding.CodePages.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.ValueTuple.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Xml.ReaderWriter.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Xml.XmlDocument.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Xml.XPath.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\System.Xml.XPath.XDocument.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\vbc.exe
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\vbc.exe.config
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\vbc.rsp
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\VBCSCompiler.exe
+E:\last one\Pharmacy System\Pharmacy System\bin\roslyn\VBCSCompiler.exe.config
+E:\last one\Pharmacy System\Pharmacy System\bin\Antlr3.Runtime.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\EntityFramework.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\EntityFramework.SqlServer.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.AspNet.Identity.Core.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.Security.Cookies.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.Security.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.Security.Facebook.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.Security.Google.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.Security.OAuth.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.Security.Twitter.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Web.Infrastructure.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Newtonsoft.Json.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\Owin.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\System.Web.Helpers.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\System.Web.Mvc.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\System.Web.Optimization.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\System.Web.Razor.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\System.Web.WebPages.Deployment.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\System.Web.WebPages.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\System.Web.WebPages.Razor.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\WebGrease.dll
+E:\last one\Pharmacy System\Pharmacy System\bin\System.Web.Helpers.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\System.Web.Mvc.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\System.Web.Optimization.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\System.Web.Razor.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\System.Web.WebPages.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\System.Web.WebPages.Deployment.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\System.Web.WebPages.Razor.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\Newtonsoft.Json.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\Antlr3.Runtime.pdb
+E:\last one\Pharmacy System\Pharmacy System\bin\EntityFramework.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\EntityFramework.SqlServer.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.AspNet.Identity.Core.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.Security.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.Security.Facebook.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.Security.Cookies.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.Security.Google.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.Security.Twitter.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.Owin.Security.OAuth.xml
+E:\last one\Pharmacy System\Pharmacy System\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\last one\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy System.csprojAssemblyReference.cache
+E:\last one\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.initialModel.resources
+E:\last one\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.CreateAdminTable.resources
+E:\last one\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.CreateCustomerTable.resources
+E:\last one\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.CreateMedicineTable.resources
+E:\last one\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.Test.resources
+E:\last one\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.Test2_alternation.resources
+E:\last one\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.Test4.resources
+E:\last one\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy System.csproj.GenerateResource.cache
+E:\last one\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy System.csproj.CopyComplete
+E:\last one\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy System.dll
+E:\last one\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy System.pdb

@@ -1,0 +1,148 @@
+﻿@model Pharmacy_System.Models.Customer
+@{
+    ViewBag.Title = "Customer_Profile";
+    Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
+}
+
+<div class="row">
+    <!-- form input mask -->
+    <div class="col-md-6 col-sm-12  ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Personal Information</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                <form class="form-horizontal form-label-left">
+
+                    <div class="form-group row">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-3">@Html.DisplayNameFor(model => model.fname)</label>
+                        <div class="col-md-9 col-sm-9 col-xs-9">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-3"> @Html.DisplayFor(model => model.fname)</label>
+                            <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-3"> @Html.DisplayNameFor(model => model.lname)</label>
+                        <div class="col-md-9 col-sm-9 col-xs-9">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-3">  @Html.DisplayFor(model => model.lname)</label>
+                            <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-3"> @Html.DisplayNameFor(model => model.user_name)</label>
+                        <div class="col-md-9 col-sm-9 col-xs-9">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-3"> @Html.DisplayFor(model => model.user_name)</label>
+                            <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-3">@Html.DisplayNameFor(model => model.phone_number)</label>
+                        <div class="col-md-9 col-sm-9 col-xs-9">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-3"> @Html.DisplayFor(model => model.phone_number)</label>
+                            <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-3">@Html.DisplayNameFor(model => model.date_birth)</label>
+                        <div class="col-md-9 col-sm-9 col-xs-9">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-3"> @Html.DisplayFor(model => model.date_birth)</label>
+                            <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-3">@Html.DisplayNameFor(model => model.email_address)</label>
+                        <div class="col-md-9 col-sm-9 col-xs-9">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-3"> @Html.DisplayFor(model => model.email_address)</label>
+                            <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-3">@Html.DisplayNameFor(model => model.card_id)</label>
+                        <div class="col-md-9 col-sm-9 col-xs-9">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-3"> @Html.DisplayFor(model => model.card_id)</label>
+                            <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    <div class="ln_solid"></div>
+
+                    <div class="form-group row">
+                        <div class="col-md-9 offset-md-3">
+                            <button type="submit" class="btn btn-success">Edit</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- /form input mask -->
+    <!-- form color picker -->
+    <div class="col-md-6 col-sm-12  ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>System Setting</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="x_content">
+                <br />
+                <form class="form-horizontal form-label-left">
+
+                    <div class="form-group row">
+                        <label class="control-label col-md-3 col-sm-3  ">Language</label>
+                        <div class="col-md-9 col-sm-9  ">
+                            <label class="control-label col-md-3 col-sm-3  ">English (United States)</label>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="control-label col-md-3 col-sm-3  ">Privacy Setting</label>
+                        <div class="col-md-9 col-sm-9  ">
+                            <div class="input-group demo2">
+                                <label class="control-label col-md-6 col-sm-6  ">Only administrator can view your profile information</label>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    @section Sidebar{
+        <div class="menu_section">
+            <h3>General</h3>
+            <ul class="nav side-menu">
+                <li>
+                    <a href="@Url.Action("Customer_Dashboard", "Customer",new { id =Model.id}, null)"><i class="fa fa-dashboard"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Customer_Profile", "Customer", new { id =Model.id},null)"><i class="fa fa-user-md"></i> Profile</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Show_Medicine", "Customer",new { id =Model.id}, null)"><i class="fa fa-dashboard"></i> Show Medicine</a>
+                </li>
+                <li>
+                    <a href="@Url.Action("contacts", "Customer",new { id =Model.id}, null)"><i class="fa fa-user-md"></i> contacts</a>
+                </li>
+
+
+            </ul>
+        </div>
+    }
