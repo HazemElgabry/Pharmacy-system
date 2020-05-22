@@ -117,6 +117,16 @@ namespace Pharmacy_System.Controllers
 
         }
         /* /////////////////////////////////////////
+         * //////////  Edit Admins  ///////////
+         * ///////////////////////////////////////        
+         */
+        public ActionResult Search_Admin(string search)
+        {
+
+            return View(db.Admins.Where(x=>x.fname.Contains(search)|| search == null ).ToList()  );
+        }
+
+        /* /////////////////////////////////////////
          * //////////  Show Customers  ///////////
          * ///////////////////////////////////////        
          */
@@ -129,6 +139,7 @@ namespace Pharmacy_System.Controllers
          * //////////  Add Customer  ///////////
          * ///////////////////////////////////////        
          */
+
         public ActionResult Add_Customers()
         {
             return View();
@@ -146,6 +157,7 @@ namespace Pharmacy_System.Controllers
             }
             return View(customer);
         }
+
         /* /////////////////////////////////////////
          * //////////  Edit Customers  ///////////
          * ///////////////////////////////////////        
