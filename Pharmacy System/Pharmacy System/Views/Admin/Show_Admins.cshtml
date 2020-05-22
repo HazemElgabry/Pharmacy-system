@@ -5,11 +5,6 @@
     Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
 }
 
-@using (Html.BeginForm("Search_Admin", "Admin", FormMethod.Get))
-{
-    @Html.TextBox("search")<input type="submit" value="search" />
-
-}
 
 <div class="col-md-12 col-sm-12 ">
     <div class="x_panel">
@@ -40,30 +35,19 @@
                             </thead>
 
                             <tbody>
-                                @if (Model.Count() == 0)
+                                @foreach (var item in Model)
                                 {
-                                    <tr>
-                                        <td colspan="3" style="color:red">
-                                            Not found in Admins
-                                        </td>
-                                    </tr>
-                                }
-                                else
-                                {
-                                    foreach (var item in Model)
-                                    {
-                                        <tr>
-                                            <td>@Html.DisplayFor(ModelItem => item.fname)</td>
-                                            <td>@Html.DisplayFor(ModelItem => item.lname)</td>
-                                            <td>@Html.DisplayFor(ModelItem => item.phone_number)</td>
-                                            <td>@Html.DisplayFor(ModelItem => item.date_birth)</td>
-                                            <td>@Html.DisplayFor(ModelItem => item.email_address)</td>
-                                            <td>@Html.DisplayFor(ModelItem => item.card_id)</td>
-                                            <td>@Html.ActionLink("Edit", "Edit_Admin", new { id = item.id }, new { @class = "btn btn-secondary btn-sm fa fa-edit" })</td>
+                                <tr>
+                                    <td>@Html.DisplayFor(ModelItem=>item.fname)</td>
+                                    <td>@Html.DisplayFor(ModelItem=>item.lname)</td>
+                                    <td>@Html.DisplayFor(ModelItem=>item.phone_number)</td>
+                                    <td>@Html.DisplayFor(ModelItem => item.date_birth)</td>
+                                    <td>@Html.DisplayFor(ModelItem => item.email_address)</td>
+                                    <td>@Html.DisplayFor(ModelItem => item.card_id)</td>
+                                    <td>@Html.ActionLink("Edit", "Edit_Admin", new {id=item.id}, new { @class = "btn btn-secondary btn-sm fa fa-edit" })</td>
+                                    
 
-
-                                        </tr>
-                                    }
+                                </tr>
                                 }
                             </tbody>
                         </table>
@@ -73,8 +57,6 @@
         </div>
     </div>
 </div>
-
-
 
 <div class="col-md-12 col-sm-12 ">
     <div class="x_panel">
