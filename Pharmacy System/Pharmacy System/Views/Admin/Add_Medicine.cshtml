@@ -6,14 +6,14 @@
 }
 
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Add_Medicine","Admin",null,FormMethod.Post,new { enctype = "form-data" }))
 {
     @Html.AntiForgeryToken()
     <div class="row">
         <div class="col-md-12 col-sm-12 ">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2><span class="fa fa-user" style="color:dimgrey;"></span>Add Medicine</h2>
+                    <h1><span class="fa fa-plus-square" style="color:dimgrey;"></span>Add Medicine</h1>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">

@@ -1,11 +1,55 @@
-﻿
+﻿@model IEnumerable<Pharmacy_System.Models.Medicine>
+
 @{
     ViewBag.Title = "Show_Medicine";
     Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
 }
-
-<h2>Show_Medicine</h2>
-
+<div>
+    <div class="x_panel">
+        <div class="x_title">
+            <h1><span class="fa fa-stethoscope"></span>Medicines</h1>
+            <ul class="nav navbar-right panel_toolbox">
+                <li>
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li>
+                    <a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content">
+            <div id="datatable_filter" class="dataTables_filter"></div>
+            <table class="table table-striped" id="datatable">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.name)</th>
+                        <th>@Html.DisplayNameFor(model => model.description)</th>
+                        <th>@Html.DisplayNameFor(model => model.black_list)</th>
+                        <th>@Html.DisplayNameFor(model => model.Price)</th>
+                        <th>@Html.DisplayNameFor(model => model.max_dose)</th>
+                        <th>@Html.DisplayNameFor(model => model.import_date)</th>
+                        <th>@Html.DisplayNameFor(model => model.expire_date)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@Html.DisplayFor(modelItem => item.name)</th>
+                            <td>@Html.DisplayFor(modelItem => item.description)</td>
+                            <td>@Html.DisplayFor(modelItem => item.black_list)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                            <td>@Html.DisplayFor(modelItem => item.max_dose)</td>
+                            <td>@Html.DisplayFor(modelItem => item.import_date)</td>
+                            <td>@Html.DisplayFor(modelItem => item.expire_date)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
 @section Sidebar{
     <div class="menu_section">
         <h3>General</h3>

@@ -333,10 +333,10 @@
     <Content Include="Views\Admin\Add_Admins.cshtml" />
     <Content Include="Views\Admin\Show_Customers.cshtml" />
     <Content Include="Views\Admin\Add_Customers.cshtml" />
-    <Content Include="Views\Admin\Show_Medicine.cshtml" />
     <Content Include="Views\Admin\Show_News.cshtml" />
     <Content Include="Views\Admin\Add_News.cshtml" />
     <Content Include="Views\Admin\Add_Medicine.cshtml" />
+    <Content Include="Views\Admin\Show_Medicine.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

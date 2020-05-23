@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pharmacy_System.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,7 @@ namespace Pharmacy_System.Controllers
          * //////////  Admin Dashboard  ///////////
          * ///////////////////////////////////////        
          */
+        ApplicationDbContext db = new ApplicationDbContext();
         public ActionResult Admin_Dashboard()
         {
             return View();
@@ -68,16 +70,26 @@ namespace Pharmacy_System.Controllers
          */
         public ActionResult Show_Medicine()
         {
-            return View();
+            var med = db.Medicines;
+            return View(med.ToList());
         }
 
         /* /////////////////////////////////////////
          * //////////  Add Medicine  ///////////
          * ///////////////////////////////////////        
          */
+        [HttpGet]
         public ActionResult Add_Medicine()
         {
-            return View();
+            Medicine med = new Medicine();
+            return View(med);
+        }
+        [HttpPost]
+        public ActionResult Add_Medicine(Medicine med)
+        {
+            db.Medicines.Add(med);
+            db.SaveChanges();
+            return RedirectToAction("Add_Medicine");
         }
 
         /* /////////////////////////////////////////

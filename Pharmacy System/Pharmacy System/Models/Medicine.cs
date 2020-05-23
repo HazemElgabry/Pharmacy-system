@@ -11,7 +11,7 @@ namespace Pharmacy_System.Models
         public int id { get; set; }
         [Display(Name = "Medicine Name")]
         public string name { get; set; }
-
+        [Range(0, 10000000)]
         public int Price { get; set; }
         [Display(Name = "Expire Date")]
         public string expire_date { get; set; }
