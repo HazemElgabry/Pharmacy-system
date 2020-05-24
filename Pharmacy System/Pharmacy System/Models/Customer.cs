@@ -41,7 +41,7 @@ namespace Pharmacy_System.Models
 
         [EmailAddress]
         [Required(ErrorMessage = "* You must enter your password")]
-        [RegularExpression(@"\w+([-+.']\w+)@\w+([-.]\w+).\w+([-.]\w+)*", ErrorMessage = "Must be a valid Email Address")]
+        //[RegularExpression(@"\w+([-+.']\w+)@\w+([-.]\w+).\w+([-.]\w+)*", ErrorMessage = "Must be a valid Email Address")]
         public string email_address { get; set; }
 
         public int card_id { get; set; }

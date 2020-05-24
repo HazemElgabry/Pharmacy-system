@@ -188,11 +188,13 @@
                         type: "POST",
                         url: "/HomePage/Login",
                         data: myData,
+                        
                         success: function (response) {
-                            if (response.result !=0 && response.result!=-1) {
+                            if (response.result != 0 && response.result != -1) {
+                              
                                window.location.href = '@Url.Action("Customer_Dashboard","Customer")'+ "/" + response.result;
                             } else if (response.result == 0) {
-                               window.location.href = AdminUrl;
+                               window.location.href = '@Url.Action("Admin_Dashboard","Admin")'+ "/" + response.id;
                             } else if (response.result == -1) {
                                 alert("Email not found");
                             }
