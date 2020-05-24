@@ -57,7 +57,7 @@ namespace Pharmacy_System.Controllers
                 var customers = db.Customers.Where(n => n.email_address == customer.email_address && n.password == customer.password).Single();
                 if (customers != null)
                 {
-
+                    Session["user_id"] = customers.id;
                     return Json(new { result = customers.id });
                     //return View("Profile", db.Customers.Find(customers.id));
                 }
@@ -69,8 +69,10 @@ namespace Pharmacy_System.Controllers
                     var Admin = db.Admins.Where(n => n.email_address == customer.email_address && n.password == customer.password).Single();
                     if (Admin != null)
                     {
+                        ViewBag.id = Admin.id;
+                        //Session["user_id"] = Admin.id;
 
-                        return Json(new { result = 0 });
+                        return Json(new { result = 0 ,id= Admin.id });
                     }
                 }
                 catch

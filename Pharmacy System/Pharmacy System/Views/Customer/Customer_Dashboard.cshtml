@@ -51,7 +51,7 @@
                 <a href="@Url.Action("Customer_Dashboard", "Customer",new { id =Model.id}, null)"><i class="fa fa-dashboard"></i> Dashboard</a>
             </li>
             <li>
-                <a href="@Url.Action("Customer_Profile", "Customer",new { id =Model.id}, null)"><i class="fa fa-user-md"></i> Profile</a>
+                <a href="@Url.Action("Customer_Profile", "Customer",new { id =Session["user_id"]}, null)"><i class="fa fa-user-md"></i> Profile</a>
             </li>
             <li>
                 <a href="@Url.Action("Show_Medicine", "Customer",new { id =Model.id}, null)"><i class="fa fa-dashboard"></i> Show Medicine</a>
