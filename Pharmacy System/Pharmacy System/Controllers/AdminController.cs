@@ -25,11 +25,39 @@ namespace Pharmacy_System.Controllers
          * //////////  Admin Profile  ///////////
          * ///////////////////////////////////////        
          */
-        public ActionResult Admin_Profile()
+        public ActionResult Admin_Profile(int? id)
         {
 
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Admin admin = db.Admins.Find(id);
+            if (admin == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(admin);
+
+
         }
+        [HttpPost]
+        public ActionResult Admin_Profile(Admin admin)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(admin).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Show_Admins");
+            }
+
+            return View(admin);
+
+
+        }
+
 
         /* /////////////////////////////////////////
          * //////////  Show Admins  ///////////
@@ -116,16 +144,7 @@ namespace Pharmacy_System.Controllers
             return RedirectToAction("Show_Admins");
 
         }
-        /* /////////////////////////////////////////
-         * //////////  Edit Admins  ///////////
-         * ///////////////////////////////////////        
-         */
-        public ActionResult Search_Admin(string search)
-        {
-
-            return View(db.Admins.Where(x=>x.fname.Contains(search)|| search == null ).ToList()  );
-        }
-
+       
         /* /////////////////////////////////////////
          * //////////  Show Customers  ///////////
          * ///////////////////////////////////////        

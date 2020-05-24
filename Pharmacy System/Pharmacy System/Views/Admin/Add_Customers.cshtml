@@ -114,10 +114,10 @@
         <h3>General</h3>
         <ul class="nav side-menu">
             <li>
-                <a href="@Url.Action("Admin_Dashboard", "Admin", null)"><i class="fa fa-dashboard"></i> Dashboard</a>
+                <a href="@Url.Action("Admin_Dashboard", "Admin", new { id = Session["user_id"] },null)"><i class="fa fa-dashboard"></i> Dashboard</a>
             </li>
             <li>
-                <a href="@Url.Action("Admin_Profile", "Admin", null)"><i class="fa fa-user-md"></i> Profile</a>
+                <a href="@Url.Action("Admin_Profile", "Admin",new { id = Session["user_id"] } ,null)"><i class="fa fa-user-md"></i> Profile</a>
             </li>
             <li>
                 <a><i class="fa fa-users"></i> Admins <span class="fa fa-chevron-down"></span></a>

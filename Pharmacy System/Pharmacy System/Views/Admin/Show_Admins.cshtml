@@ -5,11 +5,8 @@
     Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
 }
 
-@using (Html.BeginForm("Search_Admin", "Admin", FormMethod.Get))
-{
-    @Html.TextBox("search")<input type="submit" value="search" />
 
-}
+
 
 <div class="col-md-12 col-sm-12 ">
     <div class="x_panel">
@@ -22,11 +19,13 @@
             </ul>
             <div class="clearfix"></div>
         </div>
+
         <div class="x_content" style="overflow-y:scroll;overflow-x:hidden;">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="card-box table-responsive">
-                        <table class="table table-striped table-bordered" style="width:100%">
+                        <div id="datatable_filter" class="dataTables_filter"></div>
+                        <table class="table table-striped" id="datatable">
                             <thead>
                                 <tr>
                                     <th>First Name</th>
@@ -38,32 +37,20 @@
                                     <th>Edit</th>
                                 </tr>
                             </thead>
-
                             <tbody>
-                                @if (Model.Count() == 0)
+                                @foreach (var item in Model)
                                 {
-                                    <tr>
-                                        <td colspan="3" style="color:red">
-                                            Not found in Admins
-                                        </td>
-                                    </tr>
-                                }
-                                else
-                                {
-                                    foreach (var item in Model)
-                                    {
-                                        <tr>
-                                            <td>@Html.DisplayFor(ModelItem => item.fname)</td>
-                                            <td>@Html.DisplayFor(ModelItem => item.lname)</td>
-                                            <td>@Html.DisplayFor(ModelItem => item.phone_number)</td>
-                                            <td>@Html.DisplayFor(ModelItem => item.date_birth)</td>
-                                            <td>@Html.DisplayFor(ModelItem => item.email_address)</td>
-                                            <td>@Html.DisplayFor(ModelItem => item.card_id)</td>
-                                            <td>@Html.ActionLink("Edit", "Edit_Admin", new { id = item.id }, new { @class = "btn btn-secondary btn-sm fa fa-edit" })</td>
+                                <tr>
+                                    <td>@Html.DisplayFor(ModelItem => item.fname)</td>
+                                    <td>@Html.DisplayFor(ModelItem => item.lname)</td>
+                                    <td>@Html.DisplayFor(ModelItem => item.phone_number)</td>
+                                    <td>@Html.DisplayFor(ModelItem => item.date_birth)</td>
+                                    <td>@Html.DisplayFor(ModelItem => item.email_address)</td>
+                                    <td>@Html.DisplayFor(ModelItem => item.card_id)</td>
+                                    <td>@Html.ActionLink("Edit", "Edit_Admin", new { id = item.id }, new { @class = "btn btn-secondary btn-sm fa fa-edit" })</td>
 
 
-                                        </tr>
-                                    }
+                                </tr>
                                 }
                             </tbody>
                         </table>
@@ -157,10 +144,10 @@
         <h3>General</h3>
         <ul class="nav side-menu">
             <li>
-                <a href="@Url.Action("Admin_Dashboard", "Admin", null)"><i class="fa fa-dashboard"></i> Dashboard</a>
+                <a href="@Url.Action("Admin_Dashboard", "Admin", new { id = Session["user_id"] },null)"><i class="fa fa-dashboard"></i> Dashboard</a>
             </li>
             <li>
-                <a href="@Url.Action("Admin_Profile", "Admin", null)"><i class="fa fa-user-md"></i> Profile</a>
+                <a href="@Url.Action("Admin_Profile", "Admin", new { id = Session["user_id"] },null)"><i class="fa fa-user-md"></i> Profile</a>
             </li>
             <li>
                 <a><i class="fa fa-users"></i> Admins <span class="fa fa-chevron-down"></span></a>

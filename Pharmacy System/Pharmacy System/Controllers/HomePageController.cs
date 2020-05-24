@@ -69,8 +69,8 @@ namespace Pharmacy_System.Controllers
                     var Admin = db.Admins.Where(n => n.email_address == customer.email_address && n.password == customer.password).Single();
                     if (Admin != null)
                     {
-                        ViewBag.id = Admin.id;
-                        //Session["user_id"] = Admin.id;
+                        //ViewBag.id = Admin.id;
+                        Session["user_id"] = Admin.id;
 
                         return Json(new { result = 0 ,id= Admin.id });
                     }
