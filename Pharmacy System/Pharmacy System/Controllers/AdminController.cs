@@ -231,13 +231,18 @@ namespace Pharmacy_System.Controllers
         }
 
         /* /////////////////////////////////////////
-         * //////////  Show Medicine  ///////////
-         * ///////////////////////////////////////        
-         */
-        public ActionResult Show_Medicine()
+           * //////////  Show Medicine  ///////////
+           * ///////////////////////////////////////        
+           */
+
+        public ActionResult Show_Medicine(string search)
         {
-            return View();
+
+            return View(db.Medicines.Where(x => x.name.Contains(search) || search == null).ToList());
+
+
         }
+
 
         /* /////////////////////////////////////////
          * //////////  Add Medicine  ///////////
@@ -247,6 +252,80 @@ namespace Pharmacy_System.Controllers
         {
             return View();
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Add_Medicine(Medicine medicine)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Medicines.Add(medicine);
+                db.SaveChanges();
+                return RedirectToAction("Show_Medicine");
+            }
+
+            return View(medicine);
+        }
+        /* /////////////////////////////////////////
+         * //////////  Edit Medicine  ///////////
+         * ///////////////////////////////////////        
+         */
+
+        [HttpGet]
+        public ActionResult Edit_admin_medicine(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Medicine medicine = db.Medicines.Find(id);
+            if (medicine == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(medicine);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit_admin_medicine(Medicine medicine)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(medicine).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Show_Medicine");
+            }
+
+            return View(medicine);
+
+        }
+
+
+
+        /* /////////////////////////////////////////
+    * //////////  Delete Medicine  ///////////
+    * ///////////////////////////////////////        
+    */
+        public ActionResult Delete_admin_medicine(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            Medicine medicine = db.Medicines.Find(id);
+            if (medicine == null)
+            {
+                return HttpNotFound();
+            }
+            db.Medicines.Remove(medicine);
+
+            db.SaveChanges();
+            return RedirectToAction("Show_Medicine");
+
+        }
+
 
         /* /////////////////////////////////////////
          * //////////  Show News  ///////////

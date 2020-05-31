@@ -1,10 +1,165 @@
-﻿
+﻿@model IEnumerable<Pharmacy_System.Models.Medicine>
+
 @{
     ViewBag.Title = "Show_Medicine";
     Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
 }
 
-<h2>Show_Medicine</h2>
+<!--Show-->
+
+<div class="col-md-12 col-sm-12 ">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2><span class="fa fa-users"></span> Medicines</h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li>
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+
+        <!--Search-->
+        <div style="font-family:Arial">
+            @using (Html.BeginForm("Show_Medicine", "Admin", FormMethod.Get))
+            {
+
+
+                <br />
+                @Html.TextBox("search") <input type="submit" value="search" />
+            }
+
+        </div>
+
+        <div class="x_content" style="overflow-y:scroll;overflow-x:hidden;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card-box table-responsive">
+                        <table class="table table-striped table-bordered" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>name</th>
+                                    <th>price</th>
+                                    <th>description</th>
+                                    <th>import date</th>
+                                    <th>black list</th>
+                                    <th>max dose</th>
+                                    <th>Edit</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @if (Model.Count() == 0)
+                                {
+                                    <tr>
+                                        <td colspan="3" style="color:red">
+                                            Not Found
+                                        </td>
+                                    </tr>
+                                }
+                                else
+                                {
+                                    foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@Html.DisplayFor(ModelItem => item.name)</td>
+                                            <td>@Html.DisplayFor(ModelItem => item.Price)</td>
+                                            <td>@Html.DisplayFor(ModelItem => item.description)</td>
+                                            <td>@Html.DisplayFor(ModelItem => item.import_date)</td>
+                                            <td>@Html.DisplayFor(ModelItem => item.black_list)</td>
+                                            <td>@Html.DisplayFor(ModelItem => item.max_dose)</td>
+                                            <td>@Html.ActionLink("Edit", "Edit_admin_medicine", new { id = item.id }, new { @class = "btn btn-secondary btn-sm fa fa-edit" })</td>
+
+
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Submit-->
+
+<div class="col-md-12 col-sm-12 ">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2>Details</h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li>
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12 ">
+                <div class="x_panel">
+                    <div class="x_content">
+                        <br />
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">
+                                name
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" id="first-name" disabled="disabled" class="form-control ">
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                Last Name
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" id="last-name" name="last-name" disabled="disabled" class="form-control">
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align">Phone no.</label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="number" class="form-control has-feedback-left" id="inputSuccess5" disabled="disabled">
+                                <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">Date Of Birth</label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input id="birthday" class="date-picker form-control has-feedback-left" disabled="disabled" type="date">
+                                <span class="fa fa-calendar form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">Email</label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="email" class="form-control has-feedback-left" id="inputSuccess4" disabled="disabled">
+                                <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">
+                                Card no.
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                <input type="text" required="required" class="form-control has-feedback-left" disabled="disabled">
+                                <span class="fa fa-cc-visa form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="ln_solid"></div>
+                        <div class="item form-group">
+                            <div class="col-md-6 col-sm-6 offset-md-3">
+                                <button class="btn btn-danger" type="submit" disabled="disabled">Delete</button>
+                                <button type="submit" class="btn btn-success" disabled="disabled">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @section Sidebar{
     <div class="menu_section">

@@ -348,6 +348,7 @@
     <Content Include="Views\Customer\Customer_Profile.cshtml" />
     <Content Include="Views\Customer\Show_Medicine.cshtml" />
     <Content Include="Views\Customer\contacts.cshtml" />
+    <Content Include="Views\Admin\Edit_admin_medicine.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

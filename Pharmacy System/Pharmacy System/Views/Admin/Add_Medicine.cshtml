@@ -1,10 +1,110 @@
-﻿
+﻿@model Pharmacy_System.Models.Medicine
+
 @{
     ViewBag.Title = "Add_Medicine";
     Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
 }
 
-<h2>Add_Medicine</h2>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Add New Medicine</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 ">
+                    <div class="x_panel">
+                        <div class="x_content">
+                            <br />
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">
+                                    name medicine
+                                </label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                    price
+                                </label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                    expire date
+                                </label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    @Html.EditorFor(model => model.expire_date, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.expire_date, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                    describtion
+                                </label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.description, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="item form-group">
+                                <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align">
+                                    importe date
+                                </label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    @Html.EditorFor(model => model.import_date, new { htmlAttributes = new { @class = "form-control has-feedback-left" } })
+                                    @Html.ValidationMessageFor(model => model.import_date, "", new { @class = "text-danger" })
+                                    <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align">blacklist</label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    @Html.EditorFor(model => model.black_list,
+                                   new { htmlAttributes = new { @class = "date-picker form-control has-feedback-left" } })
+                                    @Html.ValidationMessageFor(model => model.black_list, "", new { @class = "text-danger" })
+                                    <span class="fa fa-calendar form-control-feedback left" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align">maxdose</label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    @Html.EditorFor(model => model.max_dose, new { htmlAttributes = new { @class = "form-control has-feedback-left" } })
+                                    @Html.ValidationMessageFor(model => model.max_dose, "", new { @class = "text-danger" })
+                                    <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                                </div>
+                            </div>
+
+
+
+                            <div class="ln_solid"></div>
+                            <div class="item form-group">
+                                <div class="col-md-6 col-sm-6 offset-md-3">
+                                    <input type="submit" value="Submit" class="btn btn-success" />
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
 
 @section Sidebar{
     <div class="menu_section">
