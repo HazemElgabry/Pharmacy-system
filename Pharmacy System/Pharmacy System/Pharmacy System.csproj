@@ -204,6 +204,14 @@
     <Compile Include="Migrations\202005200616580_Test4.Designer.cs">
       <DependentUpon>202005200616580_Test4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202006010343011_image.cs" />
+    <Compile Include="Migrations\202006010343011_image.Designer.cs">
+      <DependentUpon>202006010343011_image.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006010407188_modify.cs" />
+    <Compile Include="Migrations\202006010407188_modify.Designer.cs">
+      <DependentUpon>202006010407188_modify.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -211,7 +219,6 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Medicine.cs" />
-    <Compile Include="Models\user_id.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -230,17 +237,22 @@
     <Content Include="Content\Project_Content\green.css" />
     <Content Include="Content\Project_Content\jqvmap.min.css" />
     <Content Include="Content\Project_Content\nprogress.css" />
+    <Content Include="Content\Project_Content\calender.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\339---.png" />
     <Content Include="Image\american-express.png" />
     <Content Include="Image\cropper.jpg" />
     <Content Include="Image\favicon.ico" />
+    <Content Include="Image\images %281%29.jpg" />
+    <Content Include="Image\images.jpg" />
     <Content Include="Image\img.jpg" />
     <Content Include="Image\inbox.png" />
     <Content Include="Image\mastercard.png" />
     <Content Include="Image\media.jpg" />
+    <Content Include="Image\medical-tips.jpg" />
     <Content Include="Image\paypal.png" />
     <Content Include="Image\picture.jpg" />
     <Content Include="Image\prod-1.jpg" />
@@ -387,6 +399,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202005200616580_Test4.resx">
       <DependentUpon>202005200616580_Test4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006010343011_image.resx">
+      <DependentUpon>202006010343011_image.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006010407188_modify.resx">
+      <DependentUpon>202006010407188_modify.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

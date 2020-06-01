@@ -68,7 +68,8 @@ namespace Pharmacy_System
                      "~/Content/Project_Content/jqvmap.min.css",
                      "~/Content/Project_Content/daterangepicker.css",
                      "~/Content/Project_Content/custom.min.css",
-                      "~/Content/Project_Content/animate.min.css"));
+                      "~/Content/Project_Content/animate.min.css",
+                      "~/Content/Project_Content/calender.css"));
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -254,16 +255,33 @@ namespace Pharmacy_System.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Add_Medicine(Medicine medicine)
+        public ActionResult Add_Medicine(Medicine medicine ,HttpPostedFileBase file)
         {
-            if (ModelState.IsValid)
+            if (file != null && file.ContentLength > 0)
+                try
+                {
+                    string path = Path.Combine(Server.MapPath("~/Image"), Path.GetFileName(file.FileName));
+                    file.SaveAs(path);
+                    medicine.Image = file.FileName;
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Message = "ERROR:" + ex.Message.ToString();
+                }
+            else
             {
+                if (!ModelState.IsValid)
+                {
+                    return View(medicine);
+
+                }
+            }
+
                 db.Medicines.Add(medicine);
                 db.SaveChanges();
                 return RedirectToAction("Show_Medicine");
-            }
-
-            return View(medicine);
+            
+            
         }
         /* /////////////////////////////////////////
          * //////////  Edit Medicine  ///////////

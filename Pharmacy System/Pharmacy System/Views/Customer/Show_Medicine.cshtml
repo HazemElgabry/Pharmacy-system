@@ -1,8 +1,4 @@
-﻿@model Pharmacy_System.Models.Customer
-@using Pharmacy_System.Models;
-@{
-    ApplicationDbContext db2 = new ApplicationDbContext();
-}
+﻿@model IEnumerable<Pharmacy_System.Models.Medicine>
 @{
     ViewBag.Title = "Show_Medicine";
     Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
@@ -26,6 +22,7 @@
             <table class="table table-striped" id="datatable">
                 <thead>
                     <tr>
+                        <th>Image</th>
                         <th>Name</th>
                         <th>Description</th>
                         <th>Black List</th>
@@ -36,17 +33,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var item in db2.Medicines)
+                    @foreach (var item in Model)
                     {
-                        <tr>
-                            <th scope="row">@Html.DisplayFor(modelItem => item.name)</th>
-                            <td>@Html.DisplayFor(modelItem => item.description)</td>
-                            <td>@Html.DisplayFor(modelItem => item.black_list)</td>
-                            <td>@Html.DisplayFor(modelItem => item.Price)</td>
-                            <td>@Html.DisplayFor(modelItem => item.max_dose)</td>
-                            <td>@Html.DisplayFor(modelItem => item.import_date)</td>
-                            <td>@Html.DisplayFor(modelItem => item.expire_date)</td>
-                        </tr>
+                    <tr>
+                        <td><img src="~/Image/@item.Image" alt="#" class="img-fluid" style="width:200px;height:150px"></td>
+                        <th scope="row">@Html.DisplayFor(modelItem => item.name)</th>
+                        <td>@Html.DisplayFor(modelItem => item.description)</td>
+                        <td>@Html.DisplayFor(modelItem => item.black_list)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                        <td>@Html.DisplayFor(modelItem => item.max_dose)</td>
+                        <td>@Html.DisplayFor(modelItem => item.import_date)</td>
+                        <td>@Html.DisplayFor(modelItem => item.expire_date)</td>
+                    </tr>
                     }
                 </tbody>
             </table>
@@ -58,16 +56,16 @@
         <h3>General</h3>
         <ul class="nav side-menu">
             <li>
-                <a href="@Url.Action("Customer_Dashboard", "Customer",new { id =Model.id}, null)"><i class="fa fa-dashboard"></i> Dashboard</a>
+                <a href="@Url.Action("Customer_Dashboard", "Customer",new { id = Session["Customer_id"] }, null)"><i class="fa fa-dashboard"></i> Dashboard</a>
             </li>
             <li>
-                <a href="@Url.Action("Customer_Profile", "Customer", new { id =Model.id},null)"><i class="fa fa-user-md"></i> Profile</a>
+                <a href="@Url.Action("Customer_Profile", "Customer",new { id = Session["Customer_id"] },null)"><i class="fa fa-user-md"></i> Profile</a>
             </li>
             <li>
-                <a href="@Url.Action("Show_Medicine", "Customer",new { id =Model.id}, null)"><i class="fa fa-dashboard"></i> Show Medicine</a>
+                <a href="@Url.Action("Show_Medicine", "Customer", null)"><i class="fa fa-dashboard"></i> Show Medicine</a>
             </li>
             <li>
-                <a href="@Url.Action("contacts", "Customer",new { id =Model.id}, null)"><i class="fa fa-user-md"></i> contacts</a>
+                <a href="@Url.Action("contacts", "Customer", null)"><i class="fa fa-user-md"></i> contacts</a>
             </li>
 
 
