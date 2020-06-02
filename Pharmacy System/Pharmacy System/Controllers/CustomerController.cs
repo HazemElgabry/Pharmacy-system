@@ -27,12 +27,6 @@ namespace Pharmacy_System.Controllers
             }
             return View(customer);
         }
-        public ActionResult contacts()
-        {
-
-            return View();
-        }
-
         public ActionResult Show_Medicine()
         {
             var medicine = db.Medicines.ToList();
