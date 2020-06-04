@@ -40,17 +40,17 @@
                             <tbody>
                                 @foreach (var item in Model)
                                 {
-                                <tr>
-                                    <td>@Html.DisplayFor(ModelItem => item.fname)</td>
-                                    <td>@Html.DisplayFor(ModelItem => item.lname)</td>
-                                    <td>@Html.DisplayFor(ModelItem => item.phone_number)</td>
-                                    <td>@Html.DisplayFor(ModelItem => item.date_birth)</td>
-                                    <td>@Html.DisplayFor(ModelItem => item.email_address)</td>
-                                    <td>@Html.DisplayFor(ModelItem => item.card_id)</td>
-                                    <td>@Html.ActionLink("Edit", "Edit_Admin", new { id = item.id }, new { @class = "btn btn-secondary btn-sm fa fa-edit" })</td>
+                                    <tr>
+                                        <td>@Html.DisplayFor(ModelItem => item.fname)</td>
+                                        <td>@Html.DisplayFor(ModelItem => item.lname)</td>
+                                        <td>@Html.DisplayFor(ModelItem => item.phone_number)</td>
+                                        <td>@Html.DisplayFor(ModelItem => item.date_birth)</td>
+                                        <td>@Html.DisplayFor(ModelItem => item.email_address)</td>
+                                        <td>@Html.DisplayFor(ModelItem => item.card_id)</td>
+                                        <td>@Html.ActionLink("Edit", "Edit_Admin", new { id = item.id }, new { @class = "btn btn-secondary btn-sm fa fa-edit" })</td>
 
 
-                                </tr>
+                                    </tr>
                                 }
                             </tbody>
                         </table>
@@ -139,15 +139,18 @@
     </div>
 </div>
 
+
+
+
 @section Sidebar{
     <div class="menu_section">
         <h3>General</h3>
         <ul class="nav side-menu">
             <li>
-                <a href="@Url.Action("Admin_Dashboard", "Admin", new { id = Session["user_id"] },null)"><i class="fa fa-dashboard"></i> Dashboard</a>
+                <a href="@Url.Action("Admin_Dashboard", "Admin", new { id = Session["Admin_id"] },null)"><i class="fa fa-dashboard"></i> Dashboard</a>
             </li>
             <li>
-                <a href="@Url.Action("Admin_Profile", "Admin", new { id = Session["user_id"] },null)"><i class="fa fa-user-md"></i> Profile</a>
+                <a href="@Url.Action("Admin_Profile", "Admin", new { id = Session["Admin_id"] }, null)"><i class="fa fa-user-md"></i> Profile</a>
             </li>
             <li>
                 <a><i class="fa fa-users"></i> Admins <span class="fa fa-chevron-down"></span></a>

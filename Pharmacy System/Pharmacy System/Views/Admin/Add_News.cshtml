@@ -46,7 +46,7 @@
                                 </label>
                                 <div class="col-md-6 col-sm-6 ">
                                     <textarea id="message" required="required" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
-                                              data-parsley-validation-threshold="10"></textarea>                                   
+                                              data-parsley-validation-threshold="10"></textarea>
                                 </div>
                             </div>
                             <div class="item form-group">
@@ -56,7 +56,7 @@
                                 <div class="col-md-6 col-sm-6 ">
                                     <input class="date-picker form-control" type="time">
                                 </div>
-                            </div>                            
+                            </div>
                             <div class="ln_solid"></div>
                             <div class="item form-group">
                                 <div class="col-md-6 col-sm-6 offset-md-3">
@@ -72,15 +72,16 @@
     </div>
 }
 
+
 @section Sidebar{
     <div class="menu_section">
         <h3>General</h3>
         <ul class="nav side-menu">
             <li>
-                <a href="@Url.Action("Admin_Dashboard", "Admin",new { id = Session["user_id"] } ,null)"><i class="fa fa-dashboard"></i> Dashboard</a>
+                <a href="@Url.Action("Admin_Dashboard", "Admin", new { id = Session["Admin_id"] },null)"><i class="fa fa-dashboard"></i> Dashboard</a>
             </li>
             <li>
-                <a href="@Url.Action("Admin_Profile", "Admin", new { id = Session["user_id"] },null)"><i class="fa fa-user-md"></i> Profile</a>
+                <a href="@Url.Action("Admin_Profile", "Admin", new { id = Session["Admin_id"] }, null)"><i class="fa fa-user-md"></i> Profile</a>
             </li>
             <li>
                 <a><i class="fa fa-users"></i> Admins <span class="fa fa-chevron-down"></span></a>

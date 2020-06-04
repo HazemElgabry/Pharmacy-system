@@ -24,6 +24,7 @@ namespace Pharmacy_System.Models
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Medicine> Medicines { get; set; }
+        public DbSet<News> News { get; set; }
 
 
         public ApplicationDbContext()

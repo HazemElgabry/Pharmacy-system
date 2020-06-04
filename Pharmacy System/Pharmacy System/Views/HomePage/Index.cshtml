@@ -208,10 +208,9 @@
         })
 </script>
 
-@Scripts.Render("~/bundles/jquery")
-@Scripts.Render("~/bundles/jqueryval")
+
 <script>
-    $(document).ready(function () {
+        $(document).ready(function () {
             $("#register").click(function () {
                 if ($("#second").valid()) {
                     myData = $("#second").serialize();
@@ -236,10 +235,4 @@
                 }
             })
         })
-</script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
-    $(function () {
-        $("#datepicker").datepicker();
-    });
 </script>

@@ -97,7 +97,7 @@
                             <div class="item form-group">
                                 <div class="col-md-6 col-sm-6 offset-md-3">
                                     <input type="submit" value="Submit" class="btn btn-success" />
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -108,15 +108,16 @@
     </div>
 }
 
+
 @section Sidebar{
     <div class="menu_section">
         <h3>General</h3>
         <ul class="nav side-menu">
             <li>
-                <a href="@Url.Action("Admin_Dashboard", "Admin",new { id = Session["user_id"] } ,null)"><i class="fa fa-dashboard"></i> Dashboard</a>
+                <a href="@Url.Action("Admin_Dashboard", "Admin", new { id = Session["Admin_id"] },null)"><i class="fa fa-dashboard"></i> Dashboard</a>
             </li>
             <li>
-                <a href="@Url.Action("Admin_Profile", "Admin",new { id =Session["user_id"]}, null)"><i class="fa fa-user-md"></i> Profile</a>
+                <a href="@Url.Action("Admin_Profile", "Admin", new { id = Session["Admin_id"] }, null)"><i class="fa fa-user-md"></i> Profile</a>
             </li>
             <li>
                 <a><i class="fa fa-users"></i> Admins <span class="fa fa-chevron-down"></span></a>
