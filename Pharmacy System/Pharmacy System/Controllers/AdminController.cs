@@ -140,12 +140,12 @@ namespace Pharmacy_System.Controllers
                 return HttpNotFound();
             }
             db.Admins.Remove(admin);
-            
+
             db.SaveChanges();
             return RedirectToAction("Show_Admins");
 
         }
-       
+
         /* /////////////////////////////////////////
          * //////////  Show Customers  ///////////
          * ///////////////////////////////////////        
@@ -255,7 +255,7 @@ namespace Pharmacy_System.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Add_Medicine(Medicine medicine ,HttpPostedFileBase file)
+        public ActionResult Add_Medicine(Medicine medicine, HttpPostedFileBase file)
         {
             if (file != null && file.ContentLength > 0)
                 try
@@ -277,11 +277,11 @@ namespace Pharmacy_System.Controllers
                 }
             }
 
-                db.Medicines.Add(medicine);
-                db.SaveChanges();
-                return RedirectToAction("Show_Medicine");
-            
-            
+            db.Medicines.Add(medicine);
+            db.SaveChanges();
+            return RedirectToAction("Show_Medicine");
+
+
         }
         /* /////////////////////////////////////////
          * //////////  Edit Medicine  ///////////
@@ -351,16 +351,110 @@ namespace Pharmacy_System.Controllers
          */
         public ActionResult Show_News()
         {
-            return View();
+            return View(db.News.ToList());
         }
 
         /* /////////////////////////////////////////
          * //////////  Add News  ///////////
          * ///////////////////////////////////////        
          */
+
         public ActionResult Add_News()
         {
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Add_News(News news, HttpPostedFileBase file)
+        {
+            if (file != null && file.ContentLength > 0)
+                try
+                {
+                    string path = Path.Combine(Server.MapPath("~/Image"), Path.GetFileName(file.FileName));
+                    file.SaveAs(path);
+                    news.img = file.FileName;
+                }
+                catch (Exception ex)
+                {
+                    ViewBag.Message = "ERROR:" + ex.Message.ToString();
+                }
+            else
+            {
+                if (!ModelState.IsValid)
+                {
+                    return View(news);
+
+                }
+            }
+
+            db.News.Add(news);
+            db.SaveChanges();
+            return RedirectToAction("Show_News");
+
+
+        }
+
+        /* /////////////////////////////////////////
+         * //////////  Delete News  ///////////
+         * ///////////////////////////////////////        
+         */
+        public ActionResult Delete_News(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            News news = db.News.Find(id);
+            if (news == null)
+            {
+                return HttpNotFound();
+            }
+            db.News.Remove(news);
+
+            db.SaveChanges();
+            return RedirectToAction("Show_News");
+
+        }
+
+        /* /////////////////////////////////////////
+         * //////////  Edit News  ///////////
+         * ///////////////////////////////////////        
+         */
+        [HttpGet]
+        public ActionResult Edit_News(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            News news = db.News.Find(id);
+            if (news == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(news);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit_News(News news)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(news).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Show_News");
+            }
+
+            return View(news);
+
+        }
+
+
+
+
     }
 }

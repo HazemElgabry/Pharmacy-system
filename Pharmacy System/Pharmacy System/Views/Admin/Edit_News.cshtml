@@ -1,0 +1,179 @@
+﻿@model Pharmacy_System.Models.News
+
+@{
+    ViewBag.Title = "Edit_News";
+    Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
+}
+
+
+@using Pharmacy_System.Models;
+@{
+    ApplicationDbContext db2 = new ApplicationDbContext();
+}
+
+<div class="col-md-12 col-sm-12 ">
+    <div class="x_panel">
+        <div class="x_title">
+            <h2><span class="fa fa-newspaper-o"></span> News</h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li>
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="x_content" style="overflow-y:scroll;overflow-x:hidden;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card-box table-responsive">
+                        <table class="table table-striped table-bordered" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Release date</th>
+                                    <th>Title</th>
+                                    <th>View</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in db2.News.ToList())
+                                {
+                                    <tr>
+                                        <td>@Html.DisplayFor(Mitem => item.release_date)</td>
+                                        <td>@Html.DisplayFor(Mitem => item.title)</td>
+                                        <td>
+                                            <button class="btn btn-secondary btn-sm fa fa-eye" style="background-color:cornflowerblue;" id="show" onclick="enable_all(@item.id)"></button>
+                                            @Html.ActionLink("Delete", "Delete_News", new { item.id }, new { @class = "btn btn-danger btn-sm fa fa-delete" })
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@using (Html.BeginForm("Edit_News", "Admin", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+
+    <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+            <div class="x_title">
+                <h2>Details</h2>
+                <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                        <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 ">
+                    <div class="x_panel">
+                        <div class="x_content">
+                            <br />
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align">
+                                    Title
+                                </label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    @Html.EditorFor(model => Model.title, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => Model.title, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align">
+                                    Image
+                                </label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    <input type="file" name="file" accept="image/png,image/jpg,image/jpeg" />
+
+                                </div>
+                            </div>
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                    Description
+                                </label>
+                                <div class="col-md-6 col-sm-6 ">
+
+                                    @Html.EditorFor(model => Model.description, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                            </div>
+                            <div class="item form-group">
+                                <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">
+                                    Release date
+                                </label>
+                                <div class="col-md-6 col-sm-6 ">
+                                    @Html.EditorFor(model => model.release_date, new { htmlAttributes = new { @class = "date-picker form-control has-feedback-left", @Type = "date" } })
+                                    @Html.ValidationMessageFor(model => model.release_date, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="ln_solid"></div>
+                            <div class="item form-group">
+                                <div class="col-md-6 col-sm-6 offset-md-3">
+
+                                    <input type="submit" value="Submit" class="btn btn-success" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+
+@section Sidebar{
+    <div class="menu_section">
+        <h3>General</h3>
+        <ul class="nav side-menu">
+            <li>
+                <a href="@Url.Action("Admin_Dashboard", "Admin", new { id = Session["Admin_id"] },null)"><i class="fa fa-dashboard"></i> Dashboard</a>
+            </li>
+            <li>
+                <a href="@Url.Action("Admin_Profile", "Admin", new { id = Session["Admin_id"] }, null)"><i class="fa fa-user-md"></i> Profile</a>
+            </li>
+            <li>
+                <a><i class="fa fa-users"></i> Admins <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="@Url.Action("Show_Admins", "Admin", null)">Show Admins</a></li>
+                    <li><a href="@Url.Action("Add_Admins", "Admin", null)">Add Admins</a></li>
+                </ul>
+            </li>
+            <li>
+                <a><i class="fa fa-wheelchair"></i> Customers <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="@Url.Action("Show_Customers", "Admin", null)">Show Customers</a></li>
+                    <li><a href="@Url.Action("Add_Customers", "Admin", null)">Add Customer</a></li>
+                </ul>
+            </li>
+            <li>
+                <a><i class="fa fa-plus-square"></i> Medicines <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="@Url.Action("Show_Medicine", "Admin", null)">Show Medicines</a></li>
+                    <li><a href="@Url.Action("Add_Medicine", "Admin", null)">Add Medicines</a></li>
+                </ul>
+            </li>
+            <li>
+                <a><i class="fa fa-newspaper-o"></i> News <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                    <li><a href="@Url.Action("Show_News", "Admin", null)">Show News</a></li>
+                    <li><a href="@Url.Action("Add_News", "Admin", null)">Add News</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+}

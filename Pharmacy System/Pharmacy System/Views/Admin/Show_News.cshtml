@@ -1,4 +1,6 @@
-﻿
+﻿@model IEnumerable<Pharmacy_System.Models.News>
+@using Pharmacy_System.Models;
+
 @{
     ViewBag.Title = "Show_News";
     Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
@@ -28,11 +30,19 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>3:00AM</td>
-                                    <td>Hazem the challenger</td>
-                                    <td><button class="btn btn-secondary btn-sm fa fa-eye" style="background-color:cornflowerblue;"></button></td>
-                                </tr>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@Html.DisplayFor(Mitem => item.release_date)</td>
+                                        <td>@Html.DisplayFor(Mitem => item.title)</td>
+                                        <td>
+                                            @Html.ActionLink("Edit", "Edit_News", new { id = item.id }, new { @class = "btn btn-secondary btn-sm fa fa-edit" })
+
+                                            @Html.ActionLink("Delete", "Delete_News", new { item.id }, new { @class = "btn btn-danger btn-sm fa fa-delete" })
+                                        </td>
+
+                                    </tr>
+                                }
                             </tbody>
                         </table>
                     </div>
@@ -105,6 +115,26 @@
     </div>
 </div>
 
+
+
+
+<script>
+
+    function enable_all(y) {
+
+        @Session["id"]=y;
+        for (x = 1; x < 6; x++) {
+            if (document.getElementById(x.toString()).disabled == false) {
+                document.getElementById(x.toString()).disabled = true;
+            }
+            else {
+                document.getElementById(x.toString()).disabled = false;
+            }
+        }
+
+
+    }
+</script>
 
 
 @section Sidebar{

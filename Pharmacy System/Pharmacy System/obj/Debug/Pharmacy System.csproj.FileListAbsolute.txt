@@ -1014,3 +1014,6 @@ D:\F_SW\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy Syste
 D:\F_SW\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy System.dll
 D:\F_SW\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy System.pdb
 D:\F_SW\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.NewsTable.resources
+D:\Git_SW\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.image.resources
+D:\Git_SW\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.modify.resources
+D:\Git_SW\Pharmacy-system\Pharmacy System\Pharmacy System\obj\Debug\Pharmacy_System.Migrations.NewsTable.resources

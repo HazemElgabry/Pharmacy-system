@@ -1,10 +1,11 @@
-﻿
+﻿@model Pharmacy_System.Models.News
+
 @{
     ViewBag.Title = "Add_News";
     Layout = "~/Views/Shared/Project_Shareds/_PharmacyLayout.cshtml";
 }
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Add_News", "Admin", null, FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -29,7 +30,8 @@
                                     Title
                                 </label>
                                 <div class="col-md-6 col-sm-6 ">
-                                    <input type="text" class="form-control ">
+                                    @Html.EditorFor(model => model.title, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.title, "", new { @class = "text-danger" })
                                 </div>
                             </div>
                             <div class="item form-group">
@@ -37,7 +39,8 @@
                                     Image
                                 </label>
                                 <div class="col-md-6 col-sm-6 ">
-                                    <input type="file" accept="image/*">
+                                    <input type="file" name="file" accept="image/png,image/jpg,image/jpeg" />
+                                    @Html.ValidationMessageFor(model => model.img, "", new { @class = "text-danger" })
                                 </div>
                             </div>
                             <div class="item form-group">
@@ -45,8 +48,9 @@
                                     Description
                                 </label>
                                 <div class="col-md-6 col-sm-6 ">
-                                    <textarea id="message" required="required" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.."
-                                              data-parsley-validation-threshold="10"></textarea>
+
+                                    @Html.EditorFor(model => model.description, new { htmlAttributes = new { @class = "form-control", @name = "message" } })
+
                                 </div>
                             </div>
                             <div class="item form-group">
@@ -54,7 +58,11 @@
                                     Release date
                                 </label>
                                 <div class="col-md-6 col-sm-6 ">
-                                    <input class="date-picker form-control" type="time">
+
+
+                                    @Html.EditorFor(model => model.release_date, new { htmlAttributes = new { @class = "date-picker form-control has-feedback-left", @Type = "date" } })
+                                    @Html.ValidationMessageFor(model => model.release_date, "", new { @class = "text-danger" })
+                                    <span class="fa fa-calendar form-control-feedback left" aria-hidden="true"></span>
                                 </div>
                             </div>
                             <div class="ln_solid"></div>
